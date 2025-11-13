@@ -21,8 +21,8 @@
 			"extensions": [".starch"],
 			"configuration": "./language-configuration.json",
 			"icon": {
-				"light": "./icons/starch-light.svg",
-				"dark": "./icons/starch-dark.svg"
+				"light": "icon.png",
+				"dark": "icon.png"
 			}
 		}],
 		"grammars": [{

@@ -1,0 +1,39 @@
+{
+	"name": "starch-language-support",
+	"displayName": "STARCH Language Support",
+	"description": "Syntax highlighting and language support for STARCH",
+	"version": "1.0.0",
+	"publisher": "PotatoCorp",
+	"icon": "icon.png",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/the-potato-corp/starch-vscode"
+	},
+	"engines": {
+		"vscode": "^1.60.0"
+	},
+	"categories": ["Programming Languages"],
+	"contributes": {
+		"languages": [{
+			"id": "starch",
+			"aliases": ["STARCH", "starch"],
+			"extensions": [".starch"],
+			"configuration": "./language-configuration.json",
+			"icon": {
+				"light": "./icons/starch-light.svg",
+				"dark": "./icons/starch-dark.svg"
+			}
+		}],
+		"grammars": [{
+			"language": "starch",
+			"scopeName": "source.starch",
+			"path": "./syntaxes/starch.tmLanguage.json"
+		}],
+		"iconThemes": [{
+			"id": "starch-icons",
+			"label": "STARCH File Icons",
+			"path": "./icons/starch-icon-theme.json"
+		}]
+	}
+}

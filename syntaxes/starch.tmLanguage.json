@@ -1,0 +1,209 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "STARCH",
+	"scopeName": "source.starch",
+	"patterns": [
+		{"include": "#comments"},
+		{"include": "#keywords"},
+		{"include": "#constants"},
+		{"include": "#strings"},
+		{"include": "#numbers"},
+		{"include": "#operators"},
+		{"include": "#types"},
+		{"include": "#function-definition"},
+		{"include": "#function-call"},
+		{"include": "#names"}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.starch",
+					"match": "//.*$"
+				},
+				{
+					"name": "comment.line.number-sign.starch",
+					"match": "#.*$"
+				},
+				{
+					"name": "comment.block.starch",
+					"begin": "/\\*",
+					"end": "\\*/"
+				},
+				{
+					"name": "comment.block.html.starch",
+					"begin": "<!--",
+					"end": "-->"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.starch",
+					"match": "\\b(if|elif|else|for|in|while|match|break|continue|return|raise|try|catch|as)\\b"
+				},
+				{
+					"name": "keyword.declaration.starch",
+					"match": "\\b(function|class|var|const)\\b"
+				},
+				{
+					"name": "keyword.import.starch",
+					"match": "\\b(using|from)\\b"
+				},
+				{
+					"name": "keyword.operator.logical.starch",
+					"match": "\\b(and|or|not)\\b"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.language.starch",
+					"match": "\\b(true|false|null)\\b"
+				},
+				{
+					"name": "constant.other.caps.starch",
+					"match": "\\b[A-Z][A-Z0-9_]*\\b"
+				}
+			]
+		},
+		"strings": {
+			"patterns": [
+				{
+					"name": "string.quoted.double.starch",
+					"begin": "\"",
+					"end": "\"",
+					"patterns": [
+						{
+							"name": "constant.character.escape.starch",
+							"match": "\\\\."
+						}
+					]
+				},
+				{
+					"name": "string.quoted.single.starch",
+					"begin": "'",
+					"end": "'",
+					"patterns": [
+						{
+							"name": "constant.character.escape.starch",
+							"match": "\\\\."
+						}
+					]
+				},
+				{
+					"name": "string.quoted.backtick.starch",
+					"begin": "`",
+					"end": "`",
+					"patterns": [
+						{
+							"name": "constant.character.escape.starch",
+							"match": "\\\\."
+						}
+					]
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.hex.starch",
+					"match": "\\b0x[0-9a-fA-F]+\\b"
+				},
+				{
+					"name": "constant.numeric.binary.starch",
+					"match": "\\b0b[01]+\\b"
+				},
+				{
+					"name": "constant.numeric.float.starch",
+					"match": "\\b\\d+\\.\\d*([eE][+-]?\\d+)?\\b"
+				},
+				{
+					"name": "constant.numeric.float.scientific.starch",
+					"match": "\\b\\d+[eE][+-]?\\d+\\b"
+				},
+				{
+					"name": "constant.numeric.integer.starch",
+					"match": "\\b\\d+\\b"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.operator.pipeline.starch",
+					"match": "~>"
+				},
+				{
+					"name": "keyword.operator.range.starch",
+					"match": "\\.\\."
+				},
+				{
+					"name": "keyword.operator.arrow.starch",
+					"match": "->"
+				},
+				{
+					"name": "keyword.operator.comparison.starch",
+					"match": "(==|!=|<=|>=|<|>|≈)"
+				},
+				{
+					"name": "keyword.operator.assignment.starch",
+					"match": "(\\+=|-=|\\*=|/=|%=|\\^=|=)"
+				},
+				{
+					"name": "keyword.operator.arithmetic.starch",
+					"match": "[+\\-*/%^]"
+				},
+				{
+					"name": "keyword.operator.concatenation.starch",
+					"match": "~"
+				},
+				{
+					"name": "punctuation.separator.starch",
+					"match": "[()\\[\\]{},:;.]"
+				}
+			]
+		},
+		"types": {
+			"patterns": [
+				{
+					"name": "support.type.builtin.starch",
+					"match": "\\b(int|float|str|bool|void|dict|list|function)\\b"
+				}
+			]
+		},
+		"function-definition": {
+			"patterns": [
+				{
+					"match": "\\b(function)\\s+([^\"'=+\\-*^/\\d\\s~≈<>!%()\\[\\]{},:;.]+)\\s*(\\()",
+					"captures": {
+						"1": {"name": "keyword.declaration.starch"},
+						"2": {"name": "entity.name.function.starch"},
+						"3": {"name": "punctuation.definition.parameters.begin.starch"}
+					}
+				}
+			]
+		},
+		"function-call": {
+			"patterns": [
+				{
+					"match": "([^\"'=+\\-*^/\\d\\s~≈<>!%()\\[\\]{},:;.]+)\\s*(\\()",
+					"captures": {
+						"1": {"name": "entity.name.function.starch"},
+						"2": {"name": "punctuation.definition.arguments.begin.starch"}
+					}
+				}
+			]
+		},
+		"names": {
+			"patterns": [
+				{
+					"name": "variable.other.starch",
+					"match": "[^\"'=+\\-*^/\\d\\s~≈<>!%()\\[\\]{},:;.]+"
+				}
+			]
+		}
+	}
+}

@@ -31,7 +31,7 @@ Variables can contain almost any character except reserved operators:
 
 ```starch
 var is-valid? = true;
-var user_name! = "Edward";
+var user_name! = "John";
 ```
 
 ### Multiple Comment Styles

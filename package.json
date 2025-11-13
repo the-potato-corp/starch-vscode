@@ -2,7 +2,7 @@
 	"name": "starch-language-support",
 	"displayName": "STARCH Language Support",
 	"description": "Syntax highlighting and language support for STARCH",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "PotatoCorp",
 	"icon": "icon.png",
 	"license": "MIT",

@@ -1,6 +1,6 @@
 # STARCH Language Support
 
-Syntax highlighting and language support for **STARCH**, the primary programming language of [PotatoOS](https://github.com/yourusername/potatoos).
+Syntax highlighting and language support for **STARCH**, the primary programming language of [PotatoOS](https://github.com/the-potato-corp/potatoos).
 
 ## Features
 

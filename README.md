@@ -64,8 +64,8 @@ code --install-extension PotatoCorp.starch-language-support
 STARCH is the scripting language for PotatoOS, a portable operating system built on the Godot Engine. It combines familiar C-style syntax with modern conveniences like pipeline operators and gradual typing.
 
 Learn more:
-- [STARCH Documentation](https://github.com/yourusername/potatoos/wiki/starch)
-- [PotatoOS Project](https://github.com/yourusername/potatoos)
+- [STARCH Documentation](https://github.com/the-potato-corp/potato-os-docs)
+- [PotatoOS Project](https://github.com/the-potato-corp/potatoos)
 
 ## Contributing
 
